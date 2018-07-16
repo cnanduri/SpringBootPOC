@@ -2,14 +2,19 @@ package com.cn.vo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class User {
 
+	@ApiModelProperty("First Name of the user")
 	@JsonProperty("firstName")
 	private String firstName;
 
+	@ApiModelProperty("Last Name of the user")
 	@JsonProperty("lastName")
 	private String lastName;
 
+	@ApiModelProperty("Email of the user")
 	@JsonProperty("email")
 	private String email;
 

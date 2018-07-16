@@ -13,6 +13,11 @@ import com.cn.exception.SvcException;
 import com.cn.svc.UserSvc;
 import com.cn.vo.User;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+
+@Api("users")
 @CrossOrigin(value = "*")
 @RestController
 @RequestMapping(value = "/users/{userId}")
@@ -21,8 +26,13 @@ public class UserController extends BaseController {
 	@Autowired
 	private UserSvc userSvc;
 
-	@GetMapping(produces = { "application/json" }, consumes = { "application/json" })
-	public ResponseEntity<User> findUserDetails(@PathVariable("userId") String userId) throws SvcException {
+	@ApiOperation(value = "Retrieves User Details", response = User.class, tags = {
+			"User" })
+	@ApiResponse(code = 200, message = "User Info", response = User.class)
+	@GetMapping(produces = { "application/json" }, consumes = {
+			"application/json" })
+	public ResponseEntity<User> findUserDetails(
+			@PathVariable("userId") String userId) throws SvcException {
 
 		User user = userSvc.getUser(userId);
 
