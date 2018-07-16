@@ -1,11 +1,16 @@
 package com.cn.vo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
 
+	@JsonProperty("firstName")
 	private String firstName;
 
+	@JsonProperty("lastName")
 	private String lastName;
 
+	@JsonProperty("email")
 	private String email;
 
 	public String getFirstName() {
