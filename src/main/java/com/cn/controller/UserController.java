@@ -12,7 +12,7 @@ import com.cn.vo.User;
 @CrossOrigin(value = "*")
 @RestController
 @RequestMapping(value = "/samples")
-public class UserController {
+public class UserController extends BaseController {
 
 	@GetMapping(produces = { "application/json" }, consumes = { "application/json" })
 	public ResponseEntity<User> findUserDetails() {
