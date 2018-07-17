@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class })
-public class SpringBootPocApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootPocApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

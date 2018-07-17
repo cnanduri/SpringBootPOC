@@ -1,4 +1,4 @@
-package com.cn.controller;
+package com.cn.junit.controller;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.assertEquals;
@@ -14,6 +14,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import com.cn.controller.UserController;
 import com.cn.exception.SvcException;
 import com.cn.svc.UserSvc;
 import com.cn.vo.User;

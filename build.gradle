@@ -25,6 +25,7 @@ repositories {
 
 project.ext {
 	swaggerVersion = '2.9.2'
+	cucumberVersion = '3.0.2'
 }
 
 dependencies {
@@ -40,6 +41,13 @@ dependencies {
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: swaggerVersion
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: swaggerVersion
 	
+	//Cucumber
+	compile group: 'io.cucumber', name: 'cucumber-java', version: cucumberVersion
+	compile group: 'io.cucumber', name: 'cucumber-junit', version: cucumberVersion
+	compile group: 'io.cucumber', name: 'cucumber-spring', version: cucumberVersion
+	compile group: 'io.cucumber', name: 'pro-plugin', version: '2.1.1'
 	
+	
+		
 	
 }
