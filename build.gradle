@@ -12,6 +12,7 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -44,8 +45,8 @@ dependencies {
 	
 	//Spring cloud eureka client
 	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
-	testCompile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-	
+	testCompile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
+
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
 	
 	//Swagger
